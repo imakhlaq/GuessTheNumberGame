@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.568);
+  height: 100vh;
+}
+.upper {
+  display: flex;
+  justify-content: space-between;
+}
+.secondry_heading {
+  font-size: 4rem;
+
+  margin: 6rem 15rem;
+}
+.range {
+  font-size: 1.8rem;
+  margin: 6rem 15rem;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  margin-top: 40vh;
+}
+.right {
+  font-size: 3rem;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.check_btn {
+  display: block;
+
+  padding: 2rem;
+  text-align: center;
+  background-color: rgb(226, 55, 55);
+  border-radius: 6px;
+  border: none;
+  font-size: 1.2rem;
+}
+.gusses {
+  width: 7rem;
+  height: 5rem;
+  padding: 0 0 0 2rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 2em;
+}

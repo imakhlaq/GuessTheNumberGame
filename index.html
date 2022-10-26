@@ -6,7 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GussTheNumber</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="script" href="script.js" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="upper">
+        <h2 class="secondry_heading">Guss MY Number</h2>
+        <div class="range">(Between 1 and 20)</div>
+      </div>
+
+      <button class="play_again">Again!</button>
+      <div class="answerNumber">?</div>
+    </header>
+
+    <main>
+      <section class="left">
+        <form action="" class="form">
+          <input type="number" class="gusses" />
+          <button class="check_btn">Check!</button>
+        </form>
+      </section>
+      <section class="right">
+        <div class="low-high">Start playing...</div>
+        <div class="label-core">
+          <p>💯score: <span class="score">20</span></p>
+        </div>
+        <div class="labelScore">
+          <p>🥇Highscore: <span class="highscore">20</span></p>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="script.js"></script>
 </html>
