@@ -1,11 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 * {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.568);
+  font-family: "Press Start 2P", sans-serif;
   height: 100vh;
+  color: #eee;
+  background-color: #222;
 }
 .upper {
   display: flex;
@@ -25,10 +33,13 @@ main {
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
-  margin-top: 40vh;
+  margin-top: 25vh;
 }
 .right {
   font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 .form {
   display: flex;
@@ -38,19 +49,69 @@ main {
 }
 .check_btn {
   display: block;
-
-  padding: 2rem;
+  padding: 2rem 3.5rem;
   text-align: center;
   background-color: rgb(226, 55, 55);
   border-radius: 6px;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 .gusses {
-  width: 7rem;
-  height: 5rem;
+  width: 15rem;
+  height: 7rem;
   padding: 0 0 0 2rem;
   border-radius: 6px;
+  border: 4px solid rgba(0, 0, 0, 0.753);
+  font-size: 3rem;
+  outline: none;
+  background-color: inherit;
+}
+.gusses:focus {
+  background-color: bisque;
   border: none;
-  font-size: 2em;
+}
+.play_again {
+  margin-bottom: 15rem;
+  margin-top: 12rem;
+  display: block;
+  padding: 1rem 4rem;
+  text-align: center;
+  background-color: rgb(30, 30, 31);
+  border-radius: 6px;
+  border: none;
+  font-size: 2rem;
+  margin-left: 20rem;
+  border: 6px solid rgb(100, 99, 99);
+  cursor: pointer;
+  color: inherit;
+}
+
+.line {
+  height: 0.5rem;
+  z-index: -2;
+  background-color: aliceblue;
+}
+header {
+  position: relative;
+}
+.answerNumber {
+  font-size: 5rem;
+  background-color: black;
+  width: 15rem;
+  height: 10rem;
+  text-align: center;
+  padding-top: 3rem;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, 201%);
+  z-index: 300;
+  border: 3px solid rgba(20, 14, 14, 0.877);
+}
+.right .low-high {
+  margin-bottom: 6rem;
+}
+.left {
+  justify-self: end;
 }
