@@ -22,10 +22,14 @@ let score = 20;
 let highScore = 0;
 console.log(randomNumber);
 
+const disPlayMessage = function (message) {
+  document.querySelector(".low-high").textContent = message;
+};
+
 const check = function () {
   const guess = Number(document.querySelector(".gusses").value);
   if (!guess) {
-    document.querySelector(".low-high").textContent = "Forbiden Number";
+    disPlayMessage("Forbiden Number");
   } else if (guess === randomNumber) {
     document.querySelector(".low-high").textContent = "You Won";
 
@@ -41,12 +45,11 @@ const check = function () {
     }
   } else if (guess != randomNumber) {
     if (score > 1) {
-      document.querySelector(".low-high").textContent =
-        guess > randomNumber ? "Try Lower" : "Try Higher";
+      disPlayMessage(guess > randomNumber ? "Try Lower" : "Try Higher");
       score--;
       document.querySelector(".score").textContent = score;
     } else {
-      document.querySelector(".low-high").textContent = "You Lost the game";
+      disPlayMessage("You Lost The Game");
       document.querySelector(".score").textContent = 0;
     }
   }
@@ -58,7 +61,7 @@ document.querySelector(".play_again").addEventListener("click", function () {
   document.querySelector("body").style.backgroundColor = "#222";
   document.querySelector(".answerNumber").style.width = "15rem";
   document.querySelector(".score").textContent = "20";
-  document.querySelector(".low-high").textContent = "Start playing...";
+  disPlayMessage("Start playing...");
   document.querySelector(".gusses").value = "";
   score = 20;
   document.querySelector(".answerNumber").textContent = "?";
