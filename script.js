@@ -18,8 +18,9 @@ document.querySelector(".gusses").value = 3;
 
 // event listner on the check button
 let randomNumber = Math.floor(Math.random() * 100 + 1);
-
 let score = 20;
+let highScore = 20;
+console.log(randomNumber);
 
 const check = function () {
   const guess = Number(document.querySelector(".gusses").value);
@@ -33,6 +34,11 @@ const check = function () {
     document.querySelector(".answerNumber").style.width = "30rem";
 
     document.querySelector(".answerNumber").textContent = randomNumber;
+
+    if (score >= highScore) {
+      highScore = score;
+      document.querySelector(".highscore").textContent = highScore;
+    }
   } else if (guess > randomNumber) {
     if (score > 1) {
       document.querySelector(".low-high").textContent = "Try Lower";
@@ -60,7 +66,10 @@ document.querySelector(".play_again").addEventListener("click", function () {
   document.querySelector("body").style.backgroundColor = "#222";
   document.querySelector(".answerNumber").style.width = "15rem";
   document.querySelector(".score").textContent = "20";
+  document.querySelector(".low-high").textContent = "Start playing...";
+  document.querySelector(".gusses").value = "";
   score = 20;
   document.querySelector(".answerNumber").textContent = "?";
   randomNumber = Math.floor(Math.random() * 100 + 1);
+  console.log(randomNumber);
 });
