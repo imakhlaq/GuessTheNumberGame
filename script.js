@@ -34,7 +34,7 @@ const check = function () {
     document.querySelector(".low-high").textContent = "You Won";
 
     //manipulating css
-    document.querySelector("body").style.backgroundColor = "green";
+    document.querySelector("body").style.backgroundColor = "#166534";
     document.querySelector(".answerNumber").style.width = "30rem";
 
     document.querySelector(".answerNumber").textContent = randomNumber;
